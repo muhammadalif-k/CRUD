@@ -97,7 +97,6 @@
     <br>
     <br>
     <br>
-
 <?php
 include('CRUD/koneksi.php');
 $hasil=$con->query("SELECT * FROM `produk`");
@@ -106,6 +105,7 @@ $hasil=$con->query("SELECT * FROM `produk`");
 
 <table class="table">
 <thead class="thead-dark">
+
 <tr> 
     <th>Kode Produk</th>
     <th>Nama Produk</th>
@@ -113,6 +113,7 @@ $hasil=$con->query("SELECT * FROM `produk`");
     <th>Satuan</th>
     <th>Kategori</th>
     <th>URL Gambar</th>
+    <th>Stok</th>
     <th>Modify</th>
 </tr>
 
@@ -126,6 +127,7 @@ $hasil=$con->query("SELECT * FROM `produk`");
     <td><?php echo $data['satuan']; ?></td>
     <td><?php echo $data['kategori']; ?></td>
     <td><?php echo $data['url_gambar']; ?></td>
+    <td><?php echo $data['stok']; ?></td>
     <td><a href="editproduk.php?key=<?php echo $data['kd_produk']; ?>">Edit</a> | <a href="deleteproduk.php?key=<?php echo $data['kd_produk']; ?>">Delete</a></td>
 </tr>
 <?php } ?>
