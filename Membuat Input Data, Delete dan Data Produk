@@ -100,7 +100,12 @@
 <?php
 include('CRUD/koneksi.php');
 $hasil=$con->query("SELECT * FROM `produk`");
-
+if (isset($_GET['info'])) {
+    $info=$_GET['info'];
+    if ($info=='hapus') {
+     echo "Data Berhasil diHapus";
+    }
+}
 ?>
 
 <table class="table">
